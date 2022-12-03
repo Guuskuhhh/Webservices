@@ -4,7 +4,11 @@ fetch('https://data.buienradar.nl/2.0/feed/json') //vraagt om gegevens
     .then(data => { 
      
         //HIERONDER ZET JE CODE OM GEGEVENS UIT DE JSON BESTAND TE HALEN EN AAN ELEMENT TE KOPPELEN
-        document.getElementById("temperatuur").innerHTML = data.actual.stationmeasurements[1].temperature ;
+        document.getElementById("temperatuur").innerHTML = data.actual.stationmeasurements[32].temperature ;
+
+document.getElementById("gevoelstemperatuur").innerHTML = data.actual.stationmeasurements[32].feeltemperature ;
+
+document.getElementById("grondtemperatuur").innerHTML = data.actual.stationmeasurements[32].groundtemperature ;
 
     });
 
